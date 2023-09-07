@@ -1,0 +1,64 @@
+@import './colors';
+
+.logo {
+	display: flex;
+	align-items: center;
+	font-size: 2.4rem;
+	font-weight: bold;
+	color: rgb(184, 182, 182) !important;
+	text-decoration: none;
+	text-transform: uppercase;
+	z-index: -1;
+
+	i {
+		margin-right: 0.1em;
+	}
+
+	span {
+		text-transform: none;
+		color: $pastel-green;
+	}
+}
+
+.hero-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: -1;
+}
+
+.active {
+	color: $pastel-green !important;
+}
+
+.nav-bg-active {
+	background-color: rgba(0, 0, 0) !important;
+}
+
+.section-title {
+	position: relative;
+	padding: 1em 0;
+	font-size: 3rem;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 1em;
+		left: 50%;
+		height: 3px;
+		width: 100%;
+		transform: translateX(-50%);
+		background: linear-gradient(to right, $pink, rgba(0, 0, 0, 0));
+		border-radius: 8px;
+	}
+}
+
+.stop-blinking {
+	animation: none;
+}

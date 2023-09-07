@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/42a7142021.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link href="./dist/css/hamburger.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+    <title>Photo-Box</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="#" class="nav__logo"><i class="bi bi-camera-fill"></i>DU<span>Capture</span>.</a>
+            <button class="nav__btn hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="nav__bar">
+                <a href="#" class="nav__link active">Home</a>
+                <a href="#about" class="nav__link">O nas</a>
+                <a href="#offer" class="nav__link">Oferta</a>
+                <a href="#contact" class="nav__link">Kontakt</a>
+            </div>
+            <div class="nav__mobile">
+                <a href="#" class="nav__link">Home</a>
+                <a href="#about" class="nav__link">O nas</a>
+                <a href="#offer" class="nav__link">Oferta</a>
+                <a href="#contact" class="nav__link">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero py-5">
+
+        <div class="container">
+            <h1 class="hero__title">Twórz i uchwyć swoje <span></span></h1>
+            <p class="hero__txt">Witaj w świecie, w którym Twoje chwile stają się wiecznymi wspomnieniami. DUCapture to
+                więcej niż fotobudka – to magia, która przenosi emocje na papier. <span>Jesteśmy obecni, aby wypełnić
+                    Twoje wyjątkowe momenty radości, miłości i zabawy niezapomnianymi obrazami. Niech każdy migawka
+                    będzie
+                    kolejnym!</span></p>
+
+            <a href="#about" class="hero__btn">Poznaj nas</a>
+
+            <div class="hero__social">
+                <a target="_blank" href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+
+    </header>
+
+    <section id="about" class="about py-5">
+        <div class="container">
+            <h2 class="section-title">O nas</h2>
+            <div class="row p-3">
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="./dist/img/about-img.jpg" class="about__img" alt="Akcesoria do zdjęć z fotobudki">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <p class="about__txt">
+                        DUCapture to Twój niezastąpiony partner w tworzeniu niezapomnianych chwil! Jesteśmy pasjonatami
+                        fotografii i
+                        emocji, dlatego postanowiliśmy połączyć te dwie dziedziny, tworząc wyjątkową usługę fotobudki na
+                        wszelkiego rodzaju
+                        wydarzenia.
+                        <br><br>
+                        Co nas wyróżnia? To nasza pasja do szczegółów i dbałość o jakość. Nasza fotobudka jest
+                        wyposażona w najnowocześniejszy
+                        sprzęt, gwarantujący doskonałą jakość zdjęć. Dodatkowo, w naszej przyczepie znajdziesz bogatą
+                        kolekcję akcesoriów i
+                        kostiumów do przebrania, które dodają elementu zabawy i spontaniczności do każdej sesji
+                        zdjęciowej.
+                        <br><br>
+                        DUCapture to nie tylko fotobudka - to mobilne studio, które umożliwia Tobie i Twoim bliskim
+                        zatrzymanie ulotnych
+                        momentów w niezapomnianych kadrach. Dzięki naszej przyczepie z fotobudką, przynosimy zabawę i
+                        kreatywność podczas wesel,
+                        eventów, urodzin oraz wszelkiego rodzaju imprez.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="snapshot"></div>
+    </section>
+
+    <section class="hero-graphic">
+        <div class="container d-flex align-items-center justify-content-center h-100">
+            <p>Twój <span>uśmiech</span> jest naszą <span>inspiracją</span>.</p>
+        </div>
+    </section>
+
+    <div class="section offer py-5" id="offer">
+        <div class="container">
+            <h2 class="section-title">Nasza oferta</h2>
+            <p class="offer__txt">Z myślą o różnorodnych oczekiwaniach naszych klientów, przygotowaliśmy trzy atrakcyjne
+                pakiety, aby każdy mógł znaleźć opcję dopasowaną do swoich potrzeb:</p>
+
+            <div class="cards-box">
+
+                <div class="card">
+                    <h3 class="card__title">Podstawowy</h3>
+                    <p class="card__price">1200<span>zł</span></p>
+                    <p class="card__rental"><i class="bi bi-stopwatch"></i>Czas wypożyczenia - 2h</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Obsługa animatora</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Wybór tła do zdjęć</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Zabawne gadżety</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Nielimitowana ilość zdjęć</p>
+                    <p class="card__option" data-included="false"><i class="bi bi-dash"></i>Pendrive ze zdjęciami</p>
+                    <p class="card__option" data-included="false"><i class="bi bi-dash"></i>Fotoalbum ze zdjęciami</p>
+                    <p class="card__option" data-included="false"><i class="bi bi-dash"></i>Strefa photo bar</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="card__title">Standardowy</h3>
+                    <p class="card__price">1400<span>zł</span></p>
+                    <p class="card__rental"><i class="bi bi-stopwatch"></i>Czas wypożyczenia - 3h</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Obsługa animatora</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Wybór tła do zdjęć</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Zabawne gadżety</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Nielimitowana ilość zdjęć</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Pendrive ze zdjęciami</p>
+                    <p class="card__option" data-included="false"><i class="bi bi-dash"></i>Fotoalbum ze zdjęciami</p>
+                    <p class="card__option" data-included="false"><i class="bi bi-dash"></i>Strefa photo bar</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="card__title">Premium</h3>
+                    <p class="card__price">1600<span>zł</span></p>
+                    <p class="card__rental"><i class="bi bi-stopwatch"></i>Czas wypożyczenia - 4h</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Obsługa animatora</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Wybór tła do zdjęć</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Zabawne gadżety</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Nielimitowana ilość zdjęć</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Pendrive ze zdjęciami</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Fotoalbum ze zdjęciami</p>
+                    <p class="card__option"><i class="bi bi-check"></i>Strefa photo bar</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="offer-info py-5">
+        <div class="container">
+            <h3>Dodatkowo płatne opcje:</h3>
+
+            <div class="offer-info__extra">
+                <i class="bi bi-book"></i>
+                <p><span>Personalizwana księga gości</span> - Stwórz unikalną pamiątkę dla pary młodej,
+                    oferując personalizowaną księgę gości. Goście będą mieli okazję zostawić swoje
+                    życzenia i wspomnienia, tworząc wyjątkową pamiątkę z tego wyjątkowego dnia.</p>
+            </div>
+
+            <div class="offer-info__extra">
+                <i class="bi bi-instagram"></i>
+                <p><span>Aparat Instax</span> - Zestaw 30 wkładów Instax, w połączeniu z naszą klimatyczną
+                    fotoprzyczepą, tworzy wspaniałą przestrzeń dla gości, gdzie
+                    mogą uwiecznić chwile szczęścia w formie natychmiastowych zdjęć</p>
+            </div>
+
+            <div class="offer-info__extra">
+                <i class="fa-solid fa-road"></i>
+                <p><span>Dojazd</span> - cena pakietu obejmuje dojazd w promieniu 40km.
+                    Dojazd do klienta powyżej tego dystansu obliczamy indywidualnie w zależności od odległości oraz
+                    dnia.</p>
+            </div>
+
+            <div class="offer-info__extra">
+                <i class="bi bi-hourglass-bottom"></i>
+                <p><span>Czas</span> - każda dodatkowo rozpoczęta godzina wynajmu
+                    fotoprzyczepy to koszt 200zł.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact py-5" id="contact">
+        <div class="container">
+            <h2 class="section-title">Skontaktuj się!</h2>
+
+
+            <form class="form">
+
+                <div class="input-wrapper">
+                    <div class="form__inputBox">
+                        <input type="text" required>
+                        <span>Imię</span>
+                    </div>
+
+                    <div class="form__inputBox">
+                        <input type="email" required>
+                        <span>Adres e-mail</span>
+                    </div>
+
+                    <div class="form__inputBox">
+                        <input type="tel" required>
+                        <span>Telefon</span>
+                    </div>
+                </div>
+
+                <div class="msg-wrapper">
+                    <div class="form__inputBox">
+                        <textarea></textarea>
+                        <span>Wiadomość</span>
+                    </div>
+
+                    <div class="form__regulation">
+                        <input type="checkbox" required>
+                        <p>Zapoznałem się z informacją o przetwarzaniu danych osobowych i wyrażam zgodę na ich przetwarzanie</p>
+                    </div>
+
+                    <button class="form__btn" type="submit">Wyślij</button>
+                </div>
+
+            </form>
+
+
+            <div class="contact__box row">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="contact__item">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <p>Działamy na terenie województwa śląskiego i małopolskiego</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="tel:+48505264517" class="contact__item">
+                        <i class="bi bi-telephone-fill"></i>
+                        <p>Zadzwoń:</p>
+                        <p>+48-505-264-517</p>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <a href="mailto:kontakt@ducapture.com" class="contact__item">
+                        <i class="bi bi-envelope-at-fill"></i>
+                        <p>Napisz:</p>
+                        <p>kontakt@ducapture.com</p>
+                    </a>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="contact__item">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                        <p>Polub nas!</p>
+                        <div class="contact__item-socials">
+                            <a target="_blank" href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
+                            <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flakes-png"></div>
+        <div class="instax-png"></div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy;<span class="footer__year"></span> | <i class="bi bi-camera-fill"></i> DU<span>Capture</span>.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="./dist/js/main.min.js"></script>
+</body>
+
+</html>
+
+<!-- FIXME: W sekcji O NAS dwa zdjęcia na przemian z paragrafami oraz odnośnik do galerii -->
+<!-- FIXME: Poprawić scrollMargin -->
+
+<!-- TODO: zorbić osobną podstrone z galerią -->
+
+
+<!-- IMPROVE: Dodać scrollSpy (na kursue Udemy jest pokazane) -->
+<!-- IMPROVE: Animacja Hero (animowany napis) -->

@@ -1,0 +1,161 @@
+@media (orientation: landscape) {
+	.hero {
+		height: 600px;
+	}
+}
+
+@media (min-width: 280px) and (max-width: 350px) {
+	.hero {
+		&__title {
+			margin-top: 2em;
+		}
+
+		&__txt {
+			margin: 1em 0;
+		}
+
+		&__btn {
+			margin-top: 0.5em;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.offer-info {
+		&__extra {
+			flex-direction: column;
+			justify-content: center;
+
+			i {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__logo {
+			font-size: 3rem;
+		}
+	}
+
+	.hero {
+		height: 100vh;
+
+		&__title {
+			width: 50%;
+			margin-top: 3.4em;
+			font-size: 4rem;
+
+			span {
+				height: 4rem;
+			}
+		}
+
+		&__txt {
+			width: 50%;
+			font-size: 1.6rem;
+			span {
+				display: inline-block;
+			}
+		}
+
+		&__btn {
+			width: 200px;
+			margin-top: 1em;
+			font-size: 1.6rem;
+		}
+	}
+
+	.about {
+		&__img {
+			margin-right: 2em;
+		}
+
+		.snapshot {
+			bottom: -30%;
+			right: -20%;
+		}
+	}
+
+	.hero-graphic {
+		height: 400px;
+		background-image: url('../../dist/img/hero-section-hq.jpg');
+
+		p {
+			// padding: 2em;
+			font-size: 3.8rem;
+		}
+	}
+
+	.contact {
+		.form {
+			flex-direction: row;
+		}
+		
+		.instax-png {
+			position: absolute;
+			top: 2em;
+			left: -5%;
+			width: 700px;
+			height: 700px;
+			background-image: url('../../dist/img/instax.png');
+			background-position: center;
+			background-size: cover;
+			z-index: -10;
+			opacity: 0.09;
+
+			display: block;
+		}
+
+		.flakes-png {
+			position: absolute;
+			top: 0;
+			right: -5%;
+			width: 100%;
+			height: 100%;
+			background-image: url('../../dist/img/flakes.png');
+			background-position: center;
+			background-size: cover;
+			z-index: -10;
+			opacity: 0.2;
+			transform: translateY(0);
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.nav {
+		padding: 1em;
+
+		&__btn {
+			display: none;
+		}
+
+		&__bar {
+			display: flex;
+		}
+	}
+
+	.hero {
+		padding: 2em;
+	}
+
+	.offer {
+		.cards-box {
+			.card {
+				&:nth-child(2) {
+					scale: 1.1;
+					z-index: 2;
+
+					&:hover {
+						scale: 1.15;
+					}
+				}
+			}
+		}
+	}
+}
+
+

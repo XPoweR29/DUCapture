@@ -1,0 +1,15 @@
+$pastel-green: #aed8cc;
+$pink: #cd6688;
+$purple: #7a316f;
+$dark-purple: #461959;
+
+@mixin nav-background {
+	background-image: radial-gradient(
+		circle,
+		#000000,
+		#1e0914,
+		#2f0e25,
+		#3e113c,
+		#461959
+	);
+}

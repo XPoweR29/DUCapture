@@ -1,0 +1,31 @@
+@import './colors';
+@import './components';
+@import './nav';
+@import './header';
+@import './about';
+@import './offer';
+@import './contact';
+@import './footer';
+
+@import './media';
+@import './animations';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+	scroll-behavior: smooth;
+}
+
+[id] {
+    scroll-margin-top: 80px;
+}
