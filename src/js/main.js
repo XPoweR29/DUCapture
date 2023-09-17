@@ -1,9 +1,12 @@
 const nav = document.querySelector('.nav');
 const mobileNav = document.querySelector('.nav__mobile');
 const mobileNavLink = document.querySelectorAll('.nav__mobile .nav__link');
+const desktopNavLinks = document.querySelectorAll('.nav__bar .nav__link');
 const navBtn = document.querySelector('.nav__btn');
 const footerSpan = document.querySelector('.footer__year');
 const dynamicTxt = document.querySelector('.hero__title span');
+const scrollSpySections = document.querySelectorAll('.section');
+
 
 const heroWords = ['wspomnienia', 'emocje', 'chwile', 'przeżycia'];
 let wordIndex = 0;
@@ -55,8 +58,27 @@ const handleNav = () => {
 	}
 };
 
+const handleScrollSpy = () => {
+	if(document.body.classList.contains('main-page')) {
+		const sections = [];
+
+		scrollSpySections.forEach(section => {
+			if(window.scrollY <= section.offsetTop + section.offsetHeight - 85) {
+				sections.push(section);
+				
+				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`);
+				desktopNavLinks.forEach(link => link.classList.remove('active'));
+
+				activeSection.classList.add('active');
+			};
+		});
+	}
+}
+
 navBtn.addEventListener('click', handleNav);
 window.addEventListener('scroll', navBg);
 mobileNavLink.forEach(link => link.addEventListener('click', handleNav));
+
+window.addEventListener('scroll', handleScrollSpy);
 
 typeEffect();

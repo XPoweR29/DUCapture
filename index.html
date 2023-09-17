@@ -17,10 +17,10 @@
 
     <link href="./dist/css/hamburger.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.min.css">
-    <title>Photo-Box</title>
+    <title>DUCapture - Twoje wspomnienia w kadrze!</title>
 </head>
 
-<body>
+<body class="main-page">
 
     <nav class="nav">
         <div class="container">
@@ -31,13 +31,13 @@
                 </span>
             </button>
             <div class="nav__bar">
-                <a href="#" class="nav__link active">Home</a>
+                <a href="#home" class="nav__link active">Home</a>
                 <a href="#about" class="nav__link">O nas</a>
                 <a href="#offer" class="nav__link">Oferta</a>
                 <a href="#contact" class="nav__link">Kontakt</a>
             </div>
             <div class="nav__mobile">
-                <a href="#" class="nav__link">Home</a>
+                <a href="#home" class="nav__link">Home</a>
                 <a href="#about" class="nav__link">O nas</a>
                 <a href="#offer" class="nav__link">Oferta</a>
                 <a href="#contact" class="nav__link">Kontakt</a>
@@ -45,13 +45,13 @@
         </div>
     </nav>
 
-    <header class="hero py-5">
+    <section class="hero py-5 section" id="home">
 
         <div class="container">
             <h1 class="hero__title">Twórz i uchwyć swoje <span></span></h1>
             <p class="hero__txt">Witaj w świecie, w którym Twoje chwile stają się wiecznymi wspomnieniami. DUCapture to
                 więcej niż fotobudka – to magia, która przenosi emocje na papier. <span>Jesteśmy obecni, aby wypełnić
-                    Twoje wyjątkowe momenty radości, miłości i zabawy niezapomnianymi obrazami. Niech każdy migawka
+                    Twoje wyjątkowe momenty radości, miłości i zabawy niezapomnianymi obrazami. Niech każda migawka
                     będzie
                     kolejnym!</span></p>
 
@@ -64,42 +64,83 @@
             </div>
         </div>
 
-    </header>
+    </section>
 
-    <section id="about" class="about py-5">
+    <section id="about" class="about pt-5 section">
         <div class="container">
             <h2 class="section-title">O nas</h2>
-            <div class="row p-3">
-                <div class="col-md-6 d-flex justify-content-center">
-                    <img src="./dist/img/about-img.jpg" class="about__img" alt="Akcesoria do zdjęć z fotobudki">
+
+            <div class="about__box">
+                <div class="about__box-img">
+                    <img src="./dist/img/about-img.jpg" alt="Uśmiechnięci ludzie robiący zdjęcie w fotobudce">
                 </div>
-                <div class="col-md-6 d-flex justify-content-center">
-                    <p class="about__txt">
-                        DUCapture to Twój niezastąpiony partner w tworzeniu niezapomnianych chwil! Jesteśmy pasjonatami
+
+                <div class="about__box-txt">
+                    <p><strong>DUCapture</strong> to Twój niezastąpiony partner w tworzeniu niezapomnianych chwil!
+                        Jesteśmy pasjonatami
                         fotografii i
                         emocji, dlatego postanowiliśmy połączyć te dwie dziedziny, tworząc wyjątkową usługę fotobudki na
-                        wszelkiego rodzaju
-                        wydarzenia.
-                        <br><br>
-                        Co nas wyróżnia? To nasza pasja do szczegółów i dbałość o jakość. Nasza fotobudka jest
+                        wszelkiego rodzaju wydarzenia.
+                        wydarzenia.</p>
+
+                    <p><strong>Co nas wyróżnia?</strong> To nasza pasja do szczegółów i dbałość o jakość. Nasza
+                        fotobudka jest
                         wyposażona w najnowocześniejszy
                         sprzęt, gwarantujący doskonałą jakość zdjęć. Dodatkowo, w naszej przyczepie znajdziesz bogatą
                         kolekcję akcesoriów i
                         kostiumów do przebrania, które dodają elementu zabawy i spontaniczności do każdej sesji
-                        zdjęciowej.
-                        <br><br>
-                        DUCapture to nie tylko fotobudka - to mobilne studio, które umożliwia Tobie i Twoim bliskim
+                        zdjęciowej.</p>
+                </div>
+            </div>
+
+            <div class="about__box">
+                <div class="about__box-img">
+                    <img src="./dist/img/about-img2.jpg" alt="Uśmiechnięci ludzie robiący zdjęcie w fotobudce">
+                </div>
+
+                <div class="about__box-txt">
+                    <p>DUCapture to nie tylko fotobudka - to mobilne studio, które umożliwia Tobie i Twoim bliskim
                         zatrzymanie ulotnych
                         momentów w niezapomnianych kadrach. Dzięki naszej przyczepie z fotobudką, przynosimy zabawę i
                         kreatywność podczas wesel,
-                        eventów, urodzin oraz wszelkiego rodzaju imprez.
-                    </p>
+                        eventów, urodzin oraz wszelkiego rodzaju imprez.</p>
 
+                    <p>Nasza ekipa przybywa na czas, aby zapewnić profesjonalną obsługę, która uchwyci każdą
+                        emocjonujący chiwlę. Pozwól nam być częścią Twojego wydarzenia aby zapewnić nie tylko doskonałą
+                        jakość zdjęć ale także niezapomniane doświadczenie, które przeniesie Cię w świat pełen uśmiechu
+                        , radości i wzruszeń. </p>
                 </div>
             </div>
         </div>
 
-        <div class="snapshot"></div>
+        <div class="about__gallery">
+            <div class="container">
+                <div class="feature-box">
+                    
+                    <div class="feature-box__item">
+                        <i class="fa-solid fa-handshake"></i>
+                        <p class="title">Świetne relacje z klientami</p>
+                        <p class="txt">Zawsze słuchamy naszych klientów i stawiamy ich na pierwszym miejscu.</p>
+                    </div>
+
+                    <div class="feature-box__item">
+                        <i class="fa-solid fa-medal"></i>
+                        <p class="title">Najwyższa jakość</p>
+                        <p class="txt">Zapewniamu doskonałą jakość w każdym aspekcie naszych usług.</p>
+                    </div>
+
+                    <div class="feature-box__item">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        <p class="title">Gwarantowana dobra zabawa</p>
+                        <p class="txt">Tworzymy niezapomniane i zabawne chwile na Twojej imprezie.</p>
+                    </div>
+                </div>
+
+                <p>Aby zobaczyć efekty naszej pracy, <a href="./gallery.html">zapraszamy Cię do naszej galerii.</a> To tam nasze
+                    fotografie
+                    zamieniają się w niezapomniane opowieści, a emocje przybierają kształt i kolor.</p>
+            </div>
+        </div>
     </section>
 
     <section class="hero-graphic">
@@ -108,7 +149,7 @@
         </div>
     </section>
 
-    <div class="section offer py-5" id="offer">
+    <section class="section offer py-5" id="offer">
         <div class="container">
             <h2 class="section-title">Nasza oferta</h2>
             <p class="offer__txt">Z myślą o różnorodnych oczekiwaniach naszych klientów, przygotowaliśmy trzy atrakcyjne
@@ -157,7 +198,7 @@
 
             </div>
         </div>
-    </div>
+    </section>
 
     <section class="offer-info py-5">
         <div class="container">
@@ -192,7 +233,7 @@
         </div>
     </section>
 
-    <section class="contact py-5" id="contact">
+    <section class="contact py-5 section" id="contact">
         <div class="container">
             <h2 class="section-title">Skontaktuj się!</h2>
 
@@ -224,7 +265,8 @@
 
                     <div class="form__regulation">
                         <input type="checkbox" required>
-                        <p>Zapoznałem się z informacją o przetwarzaniu danych osobowych i wyrażam zgodę na ich przetwarzanie</p>
+                        <p>Zapoznałem się z informacją o przetwarzaniu danych osobowych i wyrażam zgodę na ich
+                            przetwarzanie</p>
                     </div>
 
                     <button class="form__btn" type="submit">Wyślij</button>
@@ -264,7 +306,8 @@
                         <p>Polub nas!</p>
                         <div class="contact__item-socials">
                             <a target="_blank" href="https://www.tiktok.com"><i class="fa-brands fa-tiktok"></i></a>
-                            <a target="_blank" href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a target="_blank" href="https://www.instagram.com"><i
+                                    class="fa-brands fa-instagram"></i></a>
                             <a target="_blank" href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
@@ -289,12 +332,3 @@
 </body>
 
 </html>
-
-<!-- FIXME: W sekcji O NAS dwa zdjęcia na przemian z paragrafami oraz odnośnik do galerii -->
-<!-- FIXME: Poprawić scrollMargin -->
-
-<!-- TODO: zorbić osobną podstrone z galerią -->
-
-
-<!-- IMPROVE: Dodać scrollSpy (na kursue Udemy jest pokazane) -->
-<!-- IMPROVE: Animacja Hero (animowany napis) -->
