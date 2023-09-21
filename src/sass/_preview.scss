@@ -1,0 +1,61 @@
+.preview {
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(4px);
+
+	.container {
+		position: relative;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&--show {
+		display: block;
+		animation: fadeIn 0.5s;
+	}
+
+	&__img {
+		width: 90%;
+		margin: 0 2em;
+		border: 4px solid rgba(255, 255, 255, 0.6);
+	}
+
+	button {
+		font-size: 3rem;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		color: rgba(255, 255, 255, 0.4);
+		transition: color 0.2s;
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+		}
+
+		&.preview__btn-close {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+		}
+
+		&.preview__btn-next {
+			position: absolute;
+			bottom: 3em;
+			right: 2em;
+		}
+
+		&.preview__btn-prev {
+			position: absolute;
+			bottom: 3em;
+			left: 2em;
+		}
+	}
+}

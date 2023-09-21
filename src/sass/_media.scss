@@ -1,3 +1,30 @@
+@media (orientation: landscape), (min-width: 576px) {
+	.preview {
+		&__img {
+			width: 85%;
+			object-fit: cover;
+		}
+
+		button {
+			&.preview__btn-close {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+
+			&.preview__btn-next {
+				bottom: 30%;
+				right: 0;
+			}
+
+			&.preview__btn-prev {
+				bottom: 30%;
+				left: 0;
+			}
+		}
+	}
+}
+
 @media (min-width: 280px) and (max-width: 350px) {
 	.hero {
 		&__title {
@@ -35,7 +62,6 @@
 	}
 
 	.hero {
-
 		&__title {
 			width: 50%;
 			margin-top: 3.4em;
@@ -191,7 +217,7 @@
 			width: 200px;
 			height: 200px;
 			margin: 1em;
-			
+
 			&::before {
 				font-size: 2.5rem;
 			}

@@ -66,3 +66,7 @@
 .nav-bg-dark {
 	background-color: rgba(0, 0, 0, 1) !important;
 }
+
+.slide-in-blurred-right{animation:slide-in-blurred-right .6s cubic-bezier(.23,1.000,.32,1.000) both;}
+
+.slide-out-blurred-right{animation:slide-out-blurred-right .45s cubic-bezier(.755,.05,.855,.06) both}

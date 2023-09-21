@@ -111,7 +111,7 @@
 		&__inputBox {
 			position: relative;
 			width: 80%;
-			margin: 1em;
+			margin: 0.5em;
 
 			&:nth-child(5) {
 				margin-top: 1em;
@@ -171,6 +171,16 @@
 					border-right: 1px solid $pastel-green;
 					letter-spacing: 0.2em;
 				}
+			}
+
+			.warning {
+				font-size: 1.2rem;
+				color: tomato;
+				visibility: hidden;
+			}
+
+			&--error .warning {
+				visibility: visible;
 			}
 		}
 
@@ -256,4 +266,22 @@
 		transform: translateY(-50%);
 	}
 
+	.popup {
+		position: fixed;
+		top: 20%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		width: 300px;
+		height: 100px;
+		transform: translateX(1000px);
+		border-radius: 10px;
+		background-color: rgba(0, 0, 0, 0.7);
+		backdrop-filter: blur(3px);
+		color: $pastel-green;
+		text-shadow: 0px 0px 4px black;
+		border: 2px solid $pastel-green;
+	}
 }

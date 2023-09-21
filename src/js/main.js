@@ -13,29 +13,30 @@ let wordIndex = 0;
 let charIndex = 0;
 let isErasing = false;
 
-
 (() => {
 	const year = new Date().getFullYear();
 	footerSpan.innerText = year;
 })();
 
 const typeEffect = () => {
-	const currWord = heroWords[wordIndex];
-	const currChar = currWord.substring(0, charIndex);
-	dynamicTxt.textContent = currChar;
+	if (document.body.classList.contains('main-page')) {
+		const currWord = heroWords[wordIndex];
+		const currChar = currWord.substring(0, charIndex);
+		dynamicTxt.textContent = currChar;
 
-	if(!isErasing && charIndex < currWord.length) {
-		charIndex++;
-		setTimeout(typeEffect, 150);
-	} else if (isErasing && charIndex > 0) {
-		charIndex--;
-		setTimeout(typeEffect, 70);
-	} else {
-		isErasing = !isErasing;
-		wordIndex = !isErasing ? (wordIndex + 1) % heroWords.length : wordIndex;
-		setTimeout(typeEffect, 1200);
+		if (!isErasing && charIndex < currWord.length) {
+			charIndex++;
+			setTimeout(typeEffect, 150);
+		} else if (isErasing && charIndex > 0) {
+			charIndex--;
+			setTimeout(typeEffect, 70);
+		} else {
+			isErasing = !isErasing;
+			wordIndex = !isErasing ? (wordIndex + 1) % heroWords.length : wordIndex;
+			setTimeout(typeEffect, 1200);
+		}
 	}
-}
+};
 
 const navBg = () => {
 	if (window.scrollY >= 80) {
@@ -59,26 +60,26 @@ const handleNav = () => {
 };
 
 const handleScrollSpy = () => {
-	if(document.body.classList.contains('main-page')) {
+	if (document.body.classList.contains('main-page')) {
 		const sections = [];
 
-		scrollSpySections.forEach(section => {
-			if(window.scrollY <= section.offsetTop + section.offsetHeight - 85) {
+		scrollSpySections.forEach((section) => {
+			if (window.scrollY <= section.offsetTop + section.offsetHeight - 85) {
 				sections.push(section);
-				
-				const activeSection = document.querySelector(`[href*="${sections[0].id}"]`);
-				desktopNavLinks.forEach(link => link.classList.remove('active'));
+
+				const activeSection = document.querySelector(
+					`[href*="${sections[0].id}"]`
+				);
+				desktopNavLinks.forEach((link) => link.classList.remove('active'));
 
 				activeSection.classList.add('active');
-			};
+			}
 		});
 	}
-}
-
+};
 navBtn.addEventListener('click', handleNav);
 window.addEventListener('scroll', navBg);
-mobileNavLink.forEach(link => link.addEventListener('click', handleNav));
-
+mobileNavLink.forEach((link) => link.addEventListener('click', handleNav));
 window.addEventListener('scroll', handleScrollSpy);
 
 typeEffect();
