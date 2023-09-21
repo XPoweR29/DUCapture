@@ -77,6 +77,7 @@ const handleScrollSpy = () => {
 		});
 	}
 };
+
 navBtn.addEventListener('click', handleNav);
 window.addEventListener('scroll', navBg);
 mobileNavLink.forEach((link) => link.addEventListener('click', handleNav));
