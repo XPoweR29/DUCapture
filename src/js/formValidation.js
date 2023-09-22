@@ -38,23 +38,33 @@ const clearError = (input) => {
 	formBox.classList.remove('form__inputBox--error');
 };
 
-const checkLength = (input, minLength) => {
+const checkLength = (input, minLength, maxLength) => {
 	if (input.value.length < minLength) {
-		showError(
-			input,
-			`Numer telefonu musi posiadać conajmniej ${minLength} cyfr.`
-		);
+		showError(input, `${input.name} musi mieć conajmniej ${minLength} znaków.`);
+	}
+
+	if (maxLength && input.value.length > maxLength) {
+		showError(input, `${input.name} może składać się z maksymalnie ${maxLength} znaków.`);
 	}
 };
 
 const checkPhoneNum = (input) => {
-	const regex = /^[0-9]+$/;
-	if (regex.test(input.value)) {
+	const regNum = /^[0-9]+$/;
+	if (regNum.test(input.value)) {
 		clearError(input);
 	} else {
 		showError(input, 'Numer telefonu może składać się tylko z cyfr.');
 	}
 };
+
+const checkName = (input) => {
+	const regName = /^[a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ']+$/;
+	if(regName.test(input.value)) {
+		clearError(input);
+	} else {
+		showError(input, `Imię nie może składać się z cyfr oraz znaków specjalnych`);
+	}
+}
 
 const checkForm = (inputs) => {
 	inputs.forEach((input) => {
@@ -91,6 +101,8 @@ const clearInputs = (inputs) => {
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	checkForm([nameInput, emailInput, phoneInput, msgInput]);
+	checkName(nameInput);
+	checkLength(nameInput, 3, 32);
 	checkPhoneNum(phoneInput);
 	checkLength(phoneInput, 9);
 	checkFormErrors();
