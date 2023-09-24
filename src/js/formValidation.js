@@ -4,6 +4,8 @@ const nameInput = document.querySelector('.form__inputBox input[type="text"]');
 const emailInput = document.querySelector('.form__inputBox input[type="email"]');
 const phoneInput = document.querySelector('.form__inputBox input[type="tel"]');
 const msgInput = document.querySelector('.form__inputBox textarea');
+const msgInputSpan = document.querySelector('.form__inputBox textarea + span');
+
 
 const showSuccessPopup = async () => {
 	formPopup.classList.add('slide-in-blurred-right');
@@ -90,6 +92,8 @@ const checkFormErrors = () => {
 		showSuccessPopup();
 		clearInputs([nameInput, emailInput, phoneInput, msgInput]);
 	}
+
+	return errorCount;
 };
 
 const clearInputs = (inputs) => {
@@ -106,4 +110,19 @@ form.addEventListener('submit', (e) => {
 	checkPhoneNum(phoneInput);
 	checkLength(phoneInput, 9);
 	checkFormErrors();
+	removeActiveLabel();
 });
+
+msgInput.addEventListener('input', () => {
+	if (msgInput.value.trim().length !== 0) {
+		msgInputSpan.classList.add('active');
+	} else {
+		msgInputSpan.classList.remove('active');
+	}
+});
+
+const removeActiveLabel = () => {
+	if(checkFormErrors() === 0) {
+		msgInputSpan.classList.remove('active');
+	} 
+}
